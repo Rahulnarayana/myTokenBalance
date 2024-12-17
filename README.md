@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Token Dashboard - React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React application to interact with a token deployed on the Binance Smart Chain (BSC) Testnet. Users can check their token balance, transfer tokens, and sign an agreement using EIP-712.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+The application integrates various Web3 functionalities including:
+- Displaying token balances
+- Transferring tokens to other addresses
+- Signing terms and conditions using EIP-712
+- Wallet interaction via Web3 libraries (Wagmi, Ethers.js)
 
-### `yarn start`
+The token contract is deployed on the **Binance Smart Chain Testnet**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Contract Information
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Contract Address**: `0xYourTokenContractAddressHere`
+- **Token Symbol**: `YourTokenSymbol`
+- **Token Decimals**: `6` (for example)
+- **Blockchain**: Binance Smart Chain Testnet (BSC Testnet)
+- **Explorer**: [BSC Testnet Explorer](https://testnet.bscscan.com/)
 
-### `yarn test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Transfer Tokens**: Users can transfer tokens to any address.
+- **Balance Display**: Users can see their current token balance.
+- **EIP-712 Agreement Signing**: Users must agree to terms and conditions by signing a message before transferring tokens.
 
-### `yarn build`
+## Setup and Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- **Node.js** (Recommended version: 16.x or later)
+- **npm** (Node Package Manager)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Steps to Set Up the Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-repo/token-dashboard.git
+   cd token-dashboard
+Install dependencies:
 
-### `yarn eject`
+bash
+Copy code
+npm install
+Configure the Token Contract: Ensure the TOKEN_ADDRESS and TOKEN_ABI are correctly set in src/utils/tokenConfig.js with the details of your deployed contract on the BSC Testnet.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Example:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+js
+Copy code
+export const TOKEN_ADDRESS = '0xYourTokenContractAddressHere';
+export const TOKEN_ABI = [ /* Your ABI here */ ];
+Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+Copy code
+npm start
+Open the app in your browser at http://localhost:3000.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Key Points to Modify:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Token Contract Information**: Replace `0xYourTokenContractAddressHere` with your actual deployed token contract address.
+2. **ABI**: Make sure you provide the correct ABI for your token contract in the `TOKEN_ABI` variable.
+3. **Faucet**: Mention the correct faucet link to obtain test tokens for the Binance Smart Chain Testnet, if necessary.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This README will provide users with all the necessary details to set up and use your application effectively.
